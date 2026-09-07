@@ -1,0 +1,10 @@
+# `install.sh` must keep LF endings whoever clones this.
+#
+# A shell script with CRLF endings fails on Linux with `bad interpreter:
+# /bin/sh^M: No such file or directory` — a message that names neither the real
+# problem nor the file, on the one script somebody runs before they own any of
+# the tools to debug it. Git on Windows converts by default, so this is not a
+# hypothetical.
+*.sh   text eol=lf
+*.ps1  text eol=crlf
+*.md   text eol=lf
